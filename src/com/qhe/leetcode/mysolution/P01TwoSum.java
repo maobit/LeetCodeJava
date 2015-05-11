@@ -23,7 +23,7 @@ public class P01TwoSum {
 
 
     public static void main(String[] args) {
-        int[] res;
+        int[] res = new int[2];
         res = twoSum(NUMBERS, TARGET);
 
         for(int result : res)
@@ -32,12 +32,12 @@ public class P01TwoSum {
     }
 
     /**
-     * ��˼·��
-     *     ����һ�������ֵΪ���±�Ϊֵ��HashMap������������飬ʹ�������ֵ��HashMap��ȡ�±꣬
-     *     ���Ϊ�գ�˵���Ѿ��ҵ�����ѭ�����һ����ֵ�����±�Է���HashMap�С�
-     * @param numbers : �������Ҫ���������
-     * @param target �� Ŀ��ֵ
-     * @return ����������꣬
+     * 基本思路：
+     *     建立一个数组的值为键，下标为值的HashMap；遍历整个数组，使用数组的值从HashMap中取下标，
+     *     如果不为空，说明已经找到；在循环最后将一个数值——下标对放入HashMap中。
+     * @param numbers : 输入的需要计算的数组
+     * @param target ： 目标值
+     * @return 返回两个坐标，
      */
     protected static int[] twoSum(int[] numbers, int target) {
         int[] result = {0, 0};
